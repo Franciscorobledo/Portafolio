@@ -1,0 +1,127 @@
+
+{%  extends 'layaout.html' %} {% block content %} {% load static %}
+
+<head >
+    <div class="row bg-black">
+        <div class="col-md-4 ">
+            <img src="{% static 'porfolio/Francisco Robledo.jfif' %}" class="rounded-circle border border-2" alt="">
+            
+            
+        </div>
+        <div class="col-md-8 my-auto">
+            <h1><strong> Francisco Robledo </strong> </h1>
+            <h3 class="fst-italic">Ingeniero Comercial / Analista Programador (estudiando). </h3>
+            <p>
+                Profesional con experiencia en control de procesos y mejora de proceso continua Como 
+                profesional me destacan mi gran interés por aprender constantemente, diferentes 
+                herramientas computacionales y mi buena integración con diferentes equipos de trabajos.
+                Motivado, apto para el trabajo en equipo y con fuertes habilidades organizativas e 
+                interpersonales. <p>Actualmente me encuentro cursando mi ultimo semestre como Analista Programador en la Universidad Inacap.</p>
+            </p>
+            <a href="{% static 'porfolio/Francisco_Robledo_Ing_Comercial.pdf' %}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank">Descargar CV</a>
+        </div>
+    </div>
+</head>
+
+<div class="p-4"></div>
+
+<h3> Skills</h3>
+<div class="p-2"></div>
+
+<div class="row my-4 text-center">
+   
+    <p>
+    </p>
+
+
+
+
+    {% for projects in projects %}
+    <div class="col-md-4 p-4 ">
+        <div class="card bg-black card-project">
+            <img src="{{projects.image.url}}" alt="{{projects.title}}" class="card-img-top img-porject" >
+            <div class="card-body">
+                <h2>{{projects.title}}</h2>
+                <p>{{projects.description}}</p>
+                {% if projects.url %}
+                <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- <pre>{{projects}}</pre> -->
+  
+
+
+    {% endfor %}
+
+</div>
+
+
+    <div class="text-center bg-black p-4">
+        <H2>Experiencia Profesional</H2>
+        <div class="p-4"></div>
+        <img src="{% static 'porfolio/experiencia.png' %}" class="bg-light rounded-circle " alt="" width="10%">
+    </div>
+    
+    <div class="row p-4 experiencia">
+        <div class="col md-4">
+            <img src="{% static 'porfolio/AFP Capital.jpg' %}" alt="" width="50%">
+        </div>
+        <div class="col-md-8 border border-light">
+            <h3>Analista Control Procesos & Compliance Inversiones Pleno</h3>
+            <h5 class="fst-italic"> 2021-diciembre  – Actualmente </h5>
+            <p >
+                Mi principal función es controlar los informes diarios sobre las distintas operaciones que 
+                realiza la empresa, que al final del día serán informados a la superintendencia de 
+                Administradora de fondos de pensiones para su revisión.
+                Estos procesos de control se realizan por medio de herramientas como SQL Server, 
+                Python, Excel, Software interno de la empresa.
+                Por otro lado, al final del día tengo la función de hacer el cierre del sistema de AFP Capital 
+                y realizar el avance de fecha para el día siguiente.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!-- experienca numero 2  -->
+    <div class="row p-4 experiencia">
+        <div class="col md-4">
+            <img src="{% static 'porfolio/AFP Capital.jpg' %}" alt="" width="50%">
+        </div>
+        <div class="col-md-8 border border-light">
+            <h3>Analista de servicios operacional AFP CAPITAL (Área Contabilidad y Finanzas) </h3>
+            <h5 class="fst-italic"> 2021-Enero - 2021-diciembre</h5>
+            <p >
+                Mi principal función en el cargo fue optimizar diferentes procesos contables que se 
+                realizaban. 
+                Algunas herramientas que utilice con el fin de automatización y visualización de datos 
+                fueron Macros en Excel, Access y Power bi. Lo que permitió mejora notable en los 
+                procesos. Durante mi periodo trabajando tuve que ayudar a la trazabilidad de los 
+                pagos en los retiros de fondo de pensión
+            </p>
+
+        </div>
+    </div>
+
+    <h3> CONTACTO  </h3>
+    <div class="row text-center ">
+            <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="https://www.linkedin.com/in/franciscorobledo/" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    
+
+
+    {% endblock %}
+  
+

@@ -1,0 +1,11 @@
+
+----- CREAR UN USUARIO EN ADMINISTRADOR  ---------
+
+1- py manage.py  createsuperuser
+
+
+nombre: francisco1
+pass: Juventusteamo8
+
+usuario creado correctamente 
+--------------------------------------------------------
